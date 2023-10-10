@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Learn Web Development</title>
+    <script>
+      function openIframe() {
+        var editorHTML = document.getElementById("inCode").value;
+        var iframe = document.getElementById('outFrame');
+        iframe.contentWindow.document.open();
+        iframe.contentWindow.document.write(editorHTML);
+        iframe.contentWindow.document.close();
+      }
+    </script>
+  </head>
+  <body>
+
+    <button onclick="openIframe()">Test</button>
+    <textarea id="inCode"></textarea>
+    <iframe id="outFrame"/>
+  </body>
+</html>
